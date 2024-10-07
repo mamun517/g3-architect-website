@@ -4,23 +4,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@800&display=swap');
 
+/* shared styles */
+
 *{
     font-family: "Work Sans", sans-serif;
-    font-weight:400, 500, 600, 700, 800;
+   
 }
 
-  
+.btn-primary{
+border-radius: 8px;
+color: #fff;
+font-size: 1.25rem;
+background: #ff900e;
+padding: 20px 25px;
+cursor: pointer;
+border: 0;
+}
 
-/* header styles */
+  /* header styles */
 header{
     background: rgba(255,144,14,0.10);
     padding: 50px 200px;
 }
+
 nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .nav-title{
    font-size: 2.8rem;
    font-weight: 700;
@@ -29,12 +41,14 @@ nav{
 nav > ul{
     display: flex;
 }
+
 nav li {
     list-style: none;
     margin-right: 30px;
     font-weight: 500;
     font-size: 1rem;
 }
+
 nav li a{
     text-decoration: none;
     color: #424242;
@@ -53,4 +67,32 @@ nav li a{
 }
 .banner-description{
     color: #727272;
+}
+.banner img{
+    margin-top: 20px;
+  width: 100%;  
+}
+
+
+/* responsive media queries */
+/* mobile devices */
+@media screen and (max-width: 576px) {
+    header{
+        padding: 20px;
+    }
+
+    nav{
+        flex-direction: column;
+    }
+}
+
+/* tablet or media devices */
+@media screen and (min-width: 576px) and (max-width: 992px){
+    header{
+        padding: 50px;
+    }
+
+    nav{
+        flex-direction: column;
+    }
 }
